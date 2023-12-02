@@ -20,7 +20,39 @@
     <header>
         <div class="container">
             <a href="#"> <img class="logo" src="./imgs/slicez-UXUI$.png" alt=""></a>
-                <ul class="main-nav">
+            <div class="bars">
+                <a href="#"><i class="fa-solid fa-bars"></i>
+                    <div class="mega-menu">
+                        <ul class="links"> 
+                            <li>
+                                <a href="#home"><i class="fa-solid fa-house"></i>Home</a>
+                            </li>
+                            <li>
+                                <a href="#about"><i class="fa-solid fa-address-card"></i>About Us</a>
+                            </li>
+                            <li>
+                                <a href="#services"><i class="fa-solid fa-building"></i>Services</a>
+                            </li>
+                            <li>
+                                <a href="#work"><i class="fa-solid fa-square-check"></i>Our Works</a>
+                            </li>
+                            <li>
+                                <a href="#clients"><i class="fa-solid fa-users"></i>Clients</a>
+                            </li>
+                            <li>
+                                <a href="#feedback"><i class="fa-solid fa-comment-dots"></i>FeedBacks</a>
+                            </li>
+                            <li>
+                                <a href="#career"><i class="far fa-chart-bar fa-fw"></i>Careers</a>
+                            </li>
+                            <li>
+                                <a href="#contact"><i class="fa-solid fa-comments"></i>Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+            <ul class="main-nav">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -48,7 +80,7 @@
                             </ul>
                         </div>
                     </li>
-                </ul>
+            </ul>
         </div>
     </header>
     <!-- end header -->
@@ -231,16 +263,16 @@
                         
                     </div>
                 </div>
-                        <button class="prev-btn" onclick="changeSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
-                        <button class="next-btn" onclick="changeSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+                        <button class="prev-btn" onclick="changeSlidePortfolio(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="next-btn" onclick="changeSlidePortfolio(1)"><i class="fa-solid fa-chevron-right"></i></button>
                 <div class="dots" style="text-align:center">
-                    <span class="dot" id="dot1" onclick="currentSlide(1)"></span>
-                    <span class="dot" id="dot2"  onclick="currentSlide(2)"></span>
-                    <span class="dot" id="dot3"  onclick="currentSlide(3)"></span>
-                    <span class="dot" id="dot4" onclick="currentSlide(4)"></span>
-                    <span class="dot" id="dot5" onclick="currentSlide(5)"></span>
-                    <span class="dot" id="dot6"  onclick="currentSlide(6)"></span>
-                    <span class="dot" id="dot7"  onclick="currentSlide(7)"></span>
+                    <span class="dot active" id="dot1" onclick="currentSlidePortfolio(1)"></span>
+                    <span class="dot" id="dot2"  onclick="currentSlidePortfolio(2)"></span>
+                    <span class="dot" id="dot3"  onclick="currentSlidePortfolio(3)"></span>
+                    <span class="dot" id="dot4" onclick="currentSlidePortfolio(4)"></span>
+                    <span class="dot" id="dot5" onclick="currentSlidePortfolio(5)"></span>
+                    <span class="dot" id="dot6"  onclick="currentSlidePortfolio(6)"></span>
+                    <span class="dot" id="dot7"  onclick="currentSlidePortfolio(7)"></span>
                 </div>
                 <a href="https://www.behance.net/slicezgd09" target="_blank" class="more">More</a>
             </div>
@@ -271,10 +303,10 @@
         <h2 class="main-title">FeedBacks</h2>
         <div class="container">
             
-            <div class="slider-container">
-                <div class="slider">
+            <div class="sliderF-container">
+                <div class="sliderF">
                     
-                    <div class="slide" id="slide1">
+                    <div class="slideF" id="slide1">
                     <div class="box">
                         <img src="./imgs/p5.jpg" alt="">
                         <h3>eva</h3>
@@ -287,7 +319,7 @@
                         <p> "I am very grateful to the company for the fantastic logo they designed for my new project. They accurately captured my vision, and the design shines with uniqueness!</p>
                     </div>
                     </div>
-                    <div class="slide" id="slide2">
+                    <div class="slideF" id="slide2">
                     <div class="box">
                         <img src="./imgs/p1.jpg" alt="">
                         <h3>Didi Center</h3>
@@ -300,7 +332,7 @@
                         <p> I benefited greatly from the elegantly designed advertising services provided by the company. They were innovative and helped me save a significant amount of time and effort</p>
                     </div>
                     </div>
-                    <div class="slide" id="slide3">
+                    <div class="slideF" id="slide3">
                         <div class="box">
                             <img src="./imgs/p2.jpg" alt="">
                             <h3>Wherever Travel</h3>
@@ -313,7 +345,7 @@
                             <p>I love how the company responds to my needs. Their professionalism and swift project delivery are unmatched!</p>
                         </div>
                     </div>
-                    <div class="slide" id="slide4">
+                    <div class="slideF" id="slide4">
                         <div class="box">
                             <img src="./imgs/p6.jpg" alt="">
                             <h3>Belkharroubi</h3>
@@ -326,7 +358,7 @@
                             <p>The company has an extremely creative and professional team. They understood exactly what I wanted and executed their work exceptionally</p>
                         </div>
                     </div>
-                    <div class="slide" id="slide5">
+                    <div class="slideF" id="slide5">
                         <div class="box">
                             <img src="./imgs/p3.jpg" alt="">
                             <h3>Souf Delivery</h3>
@@ -339,7 +371,7 @@
                             <p> The company provides excellent customer service. They were very interested in meeting my desires and ensuring my complete satisfaction. I truly felt valued!</p>
                         </div>
                     </div>
-                    <div class="slide" id="slide6">
+                    <div class="slideF" id="slide6">
                         <div class="box">
                             <img src="./imgs/p4.jpg" alt="">
                             <h3>Quiquo food </h3>
@@ -352,7 +384,7 @@
                             <p> "I was impressed by the company's commitment to customer satisfaction. They went above and beyond to understand my preferences, and I felt truly appreciated as a customer</p>
                         </div>
                     </div>
-                    <div class="slide" id="slide7">
+                    <div class="slideF" id="slide7">
                         <div class="box">
                             <img src="./imgs/p7.jpg" alt="">
                             <h3>Mazaj food</h3>
@@ -366,18 +398,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="dots" style="text-align:center">
-                    <span class="dot" id="dot1" onclick="currentSlide(1)"></span>
-                    <span class="dot" id="dot2"  onclick="currentSlide(2)"></span>
-                    <span class="dot" id="dot3"  onclick="currentSlide(3)"></span>
-                    <span class="dot" id="dot4" onclick="currentSlide(4)"></span>
-                    <span class="dot" id="dot5" onclick="currentSlide(5)"></span>
-                    <span class="dot" id="dot6"  onclick="currentSlide(6)"></span>
-                    <span class="dot" id="dot7"  onclick="currentSlide(7)"></span>
+                <div class="dotsF" style="text-align:center">
+                    <span class="dotF active" id="dot1" onclick="currentSlideFeedback(1)"></span>
+                    <span class="dotF" id="dot2"  onclick="currentSlideFeedback(2)"></span>
+                    <span class="dotF" id="dot3"  onclick="currentSlideFeedback(3)"></span>
+                    <span class="dotF" id="dot4" onclick="currentSlideFeedback(4)"></span>
+                    <span class="dotF" id="dot5" onclick="currentSlideFeedback(5)"></span>
+                    <span class="dotF" id="dot6"  onclick="currentSlideFeedback(6)"></span>
+                    <span class="dotF" id="dot7"  onclick="currentSlideFeedback(7)"></span>
                 </div>  
             </div>
-            <button class="prev-btn" onclick="changeSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="next-btn" onclick="changeSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="prev-btnF" onclick="changeSlideFeedback(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="next-btnF" onclick="changeSlideFeedback(1)"><i class="fa-solid fa-chevron-right"></i></button>
             
         </div>
     </div>
