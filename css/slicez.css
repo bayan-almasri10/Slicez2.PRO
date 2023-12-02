@@ -162,6 +162,16 @@ header .main-nav{
     header .bars{
         display:flex;
     }
+    header .bars .main-nav > li:hover .mega-menu{
+        opacity: 1;
+        z-index: 100;
+        top: calc(100% + 1px);
+    }
+}
+.fa-bars{
+    color: var(--section-background);
+    font-size: 25px;
+    margin-right: 5px;
 }
 @media (max-width:767px) {
     header .main-nav{
@@ -174,12 +184,29 @@ header .main-nav > li:hover .mega-menu{
     z-index: 100;
     top: calc(100% + 1px);
 }
+header .bars a:hover .mega-menu{
+    opacity: 1;
+    z-index: 100;
+    top: calc(100% + 1px);
+}
 @media (max-width:767px){
     header .main-nav > li > a{
         font-size: 12px;
     }
 }
-
+header .bars > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    position: relative;
+    /* color: white; */
+    color: var(--section-background);
+    padding: 0 30px;
+    font-size: 18px;
+    overflow: hidden;
+    transition: var(--main-transition);
+}
 header .main-nav > li > a{
     display: flex;
     justify-content: center;
@@ -498,7 +525,8 @@ header .mega-menu .links li a i{
     .portfolio .image-container .box{
         width:50%;
         height: 50%;
-        margin-left: 3%;
+        display: block;
+        margin-left: 4%;
     }
 }
 .portfolio .image-container .box:hover .caption{
@@ -712,7 +740,7 @@ header .mega-menu .links li a i{
 }
 @media (max-width:767px){
     .feedback .box::after{
-        bottom: -50px; 
+        bottom: -60px; 
     }
 }
 .feedback .box img{
@@ -977,6 +1005,7 @@ header .mega-menu .links li a i{
     font-size: 20px;
     color: whitesmoke;
 }
+
 /* start footer */
 .footer{
     background-color:var(--section-background);
@@ -1000,26 +1029,26 @@ header .mega-menu .links li a i{
 .footer .box .social{
     display: flex;
 }
-@media (max-width:767px){
+/* @media (max-width:767px){
     .footer .box .social{
         justify-content: center ;
         text-align: center;
+
     }
-}
+} */
 .footer .box .social li{
     margin-left: 8px;
 }
-.footer .box .social li .ico
-{
+.footer .box .social li .ico{
     width: 30px;
     height: 30px;
     /* margin-left: 4px; */
 }
-.footer .box .social li .fa-linkedin{
+/* .footer .box .social li .fa-linkedin{
     color: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 50%;
-}
+} */
 .footer .box .social li a{
     background-color:var(--section-background) ;
     color:white;
@@ -1031,11 +1060,11 @@ header .mega-menu .links li a i{
     font-size: 20px;
     transition: var(--main-transition);
 }
-@media (max-width:767px){
+/* @media (max-width:767px){
     .footer .box .social li a{
         margin-left: 12px;
     }
-}
+} */
 .footer .box .line{
     display: flex;
     align-items: center;
