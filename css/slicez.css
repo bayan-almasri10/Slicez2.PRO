@@ -21,7 +21,7 @@ html{
 }
 body{
     font-family: "poppins", sans-serif;
-    /* background-color: whitesmoke; */
+    background-color: whitesmoke;
 }
 a{
     text-decoration: none;
@@ -587,6 +587,11 @@ header .mega-menu .links li a i{
 @media (max-width:426px){
     .portfolio .image-container .box{
         margin-left: 8%;
+    }
+}
+@media (max-width:376px){
+    .portfolio .image-container .box{
+        margin-left: 7%;
     }
 }
 @media (max-width:321px){
