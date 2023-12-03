@@ -160,12 +160,10 @@ header .main-nav{
 }
 @media (max-width:767px) {
     header .bars{
-        display:flex;
+        display:block;
     }
-    header .bars .main-nav > li:hover .mega-menu{
-        opacity: 1;
-        z-index: 100;
-        top: calc(100% + 1px);
+    header .main-nav{
+        display: none;
     }
 }
 .fa-bars{
@@ -174,38 +172,36 @@ header .main-nav{
     margin-right: 5px;
 }
 @media (max-width:767px) {
-    header .main-nav{
-        /* margin: auto; */
-        display: none;
-    }
 }
 header .main-nav > li:hover .mega-menu{
     opacity: 1;
     z-index: 100;
     top: calc(100% + 1px);
 }
-header .bars a:hover .mega-menu{
+/* header .bars a:hover .mega-menu{
     opacity: 1;
     z-index: 100;
     top: calc(100% + 1px);
-}
+} */
 @media (max-width:767px){
+    header .bars .bar:hover .mega-menu{
+        display: block;
+    }
     header .main-nav > li > a{
         font-size: 12px;
     }
-}
-header .bars > a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 72px;
-    position: relative;
-    /* color: white; */
-    color: var(--section-background);
-    padding: 0 30px;
-    font-size: 18px;
-    overflow: hidden;
-    transition: var(--main-transition);
+    header .bars .mega-menu .links li a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 72px;
+        position: relative;
+        color: var(--section-background);
+        padding: 0 30px;
+        font-size: 18px;
+        overflow: hidden;
+        transition: var(--main-transition);
+    } 
 }
 header .main-nav > li > a{
     display: flex;
@@ -306,6 +302,20 @@ header .mega-menu .links li a{
 header .mega-menu .links li a i{
     margin-right: 10px;
 }
+header .bars input[type="checkbox"] + .bar .mega-menu {
+    display: none;
+}
+
+header .bars input[type="checkbox"]:checked + .bar .mega-menu {
+    display: block;
+}
+header .bars .mega-menu {
+    display: none;
+}
+header .bars input:checked + .bar .mega-menu {
+    display: block;
+}
+
 /* end header */
 /* start landing */
 .landing{
