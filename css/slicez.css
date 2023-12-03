@@ -21,7 +21,7 @@ html{
 }
 body{
     font-family: "poppins", sans-serif;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
 }
 a{
     text-decoration: none;
@@ -124,7 +124,6 @@ ul{
 /* component main title */
 /* start header */
 header{
-    /* background-color: var(--section-background); */
     background-color: white;
     box-shadow: 0 0 10px rgba(47, 47, 175, 0.451);
     -webkit-box-shadow: 0 0 10px #ddd;
@@ -152,6 +151,7 @@ header .logo{
         margin-bottom: 0px;
     }
 }
+header .bar,
 header .bars{
     display: none;
 }
@@ -159,8 +159,11 @@ header .main-nav{
     display: flex;
 }
 @media (max-width:767px) {
-    header .bars{
-        display:block;
+    header .bar{
+        display:flex;
+    }
+    header .bar:hover .bars{
+        display:flex;
     }
     header .main-nav{
         display: none;
@@ -171,37 +174,17 @@ header .main-nav{
     font-size: 25px;
     margin-right: 5px;
 }
-@media (max-width:767px) {
-}
 header .main-nav > li:hover .mega-menu{
     opacity: 1;
     z-index: 100;
     top: calc(100% + 1px);
 }
-/* header .bars a:hover .mega-menu{
-    opacity: 1;
-    z-index: 100;
-    top: calc(100% + 1px);
-} */
-@media (max-width:767px){
-    header .bars .bar:hover .mega-menu{
-        display: block;
+@media (max-width:767px) {
+    header .bars .bar:hover .mega{
+        opacity: 1;
+        z-index: 100;
+        top: calc(100% + 1px);
     }
-    header .main-nav > li > a{
-        font-size: 12px;
-    }
-    header .bars .mega-menu .links li a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 72px;
-        position: relative;
-        color: var(--section-background);
-        padding: 0 30px;
-        font-size: 18px;
-        overflow: hidden;
-        transition: var(--main-transition);
-    } 
 }
 header .main-nav > li > a{
     display: flex;
@@ -209,7 +192,6 @@ header .main-nav > li > a{
     align-items: center;
     height: 72px;
     position: relative;
-    /* color: white; */
     color: var(--section-background);
     padding: 0 30px;
     font-size: 18px;
@@ -217,7 +199,7 @@ header .main-nav > li > a{
     transition: var(--main-transition);
 }
 @media (max-width:767px) {
-    header .main-nav > li > a{
+    header .bars .mega .links a{
         font-size: 14px;
         padding: 9px;
         height: 40px;
@@ -234,13 +216,27 @@ header .main-nav > li > a::before{
     background-color: var(--main-color);
     transition: var(--main-transition);
 }
-/* header .main-nav > li > a:hover{
-    color: var(--main-color);
-    background-color:   rgba(98, 76, 157, 0.249);
+/* @media (max-width:767px) {
+    header .bars > li > a::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        margin-bottom: 4px;
+        left: -100%;
+        background-color: var(--main-color);
+        transition: var(--main-transition);
+    }
 } */
 header .main-nav > li > a:hover::before{
     left: 0;
 }
+/* @media (max-width:767px) {
+    header .bars a:hover::before{
+        left: 0;
+    }
+} */
 header .mega-menu{
     position: absolute;
     width: 30%;
@@ -255,15 +251,33 @@ header .mega-menu{
     opacity: 0;
     transition: top var(--main-transition), opacity var(--main-transition);
 }
+/* @media (max-width:767px) {
+    header .bars.mega .bar:hover {
+        
+        width: 30%; */
+        /* right: 0; */
+        
+        /* padding: 20px; */
+        /* gap: 40px;
+    }
+} */
 @media (max-width:767px){
-    header .mega-menu{
+    header .bars.mega{
+        position: absolute;
+        background-color: var(--section-background);
+        display: flex;
+        z-index: -1;
+        border-bottom: 4px solid var(--main-color);
+        top: calc(100% + 50px );
+        opacity: 0;
+        transition: top var(--main-transition), opacity var(--main-transition);
         left: 0;
         width: 100%;
         flex-direction: column;
         gap: 0;
         padding: 5px;
     }
-    header .mega-menu:hover{
+    header .mega:hover{
         width: 100%;
     }
 }
@@ -271,11 +285,25 @@ header .mega-menu .links{
     min-width: 240px;
     flex: 1;
 }
+@media (max-width:767px){
+    header .mega .links{
+        min-width: 240px;
+        flex: 1;
+    }
+}
 header .mega-menu .links li{
     position: relative;
 }
 header .mega-menu .links li:not(:last-child){
     border-bottom: 1px solid #ececec;
+}
+@media (max-width:767px){
+    header .mega .links li{
+        position: relative;
+    }
+    header .mega .links li:not(:last-child){
+        border-bottom: 1px solid #ececec;
+    }
 }
 header .mega-menu .links li::before{
     content: "";
@@ -287,6 +315,19 @@ header .mega-menu .links li::before{
     background-color: #fafafa;
     z-index: -1;
     transition: var(--main-transition);
+}
+@media (max-width:767px){
+    header .mega .links li::before{
+        content: "";
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #fafafa;
+        z-index: -1;
+        transition: var(--main-transition);
+    }
 }
 header .mega-menu .links :hover::before{
     width: 100%;
@@ -302,20 +343,24 @@ header .mega-menu .links li a{
 header .mega-menu .links li a i{
     margin-right: 10px;
 }
-header .bars input[type="checkbox"] + .bar .mega-menu {
-    display: none;
+/* header .bars .bar:hover .mega{
+    display: flex;
+} */
+@media (max-width:767px){
+    header .mega .links li a{
+        color: var(--main-color);
+        display: block;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    header .mega .links li a i{
+        margin-right: 10px;
+    }
+    header .bars .bar:hover .mega{
+        display: flex;
+    }
 }
-
-header .bars input[type="checkbox"]:checked + .bar .mega-menu {
-    display: block;
-}
-header .bars .mega-menu {
-    display: none;
-}
-header .bars input:checked + .bar .mega-menu {
-    display: block;
-}
-
 /* end header */
 /* start landing */
 .landing{
@@ -536,7 +581,17 @@ header .bars input:checked + .bar .mega-menu {
         width:50%;
         height: 50%;
         display: block;
-        margin-left: 4%;
+        margin-left: 36%;
+    }
+}
+@media (max-width:426px){
+    .portfolio .image-container .box{
+        margin-left: 8%;
+    }
+}
+@media (max-width:321px){
+    .portfolio .image-container .box{
+        margin-left: 3%;
     }
 }
 .portfolio .image-container .box:hover .caption{
