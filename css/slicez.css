@@ -497,8 +497,6 @@ header .mega-menu .links li a i{
 }
 .services .box{
     background-color:  #6a5c9c3e;
-    background-image: url(../imgs/serv2.jpg);
-    background-size: cover;
     counter-increment: services;
     transition: var(--main-transition);
     position: relative;
@@ -528,10 +526,10 @@ header .mega-menu .links li a i{
     color: var(--section-background);
     padding: 9px 7px;
     font-size: 10px;
-    background-color: var(--text-color);
+    background-color:whitesmoke;
     border-radius: 20px 0px 20px 0px;
     display: flex;
-    justify-content: flex-end;
+    margin-left: 35%;
     width: fit-content;
     text-align: center;
 }
