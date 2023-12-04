@@ -162,7 +162,7 @@ header .main-nav{
     header .bar{
         display:flex;
     }
-    header .bar:hover .bars{
+    header .bar:hover + .bars{
         display:flex;
     }
     header .main-nav{
@@ -180,7 +180,7 @@ header .main-nav > li:hover .mega-menu{
     top: calc(100% + 1px);
 }
 @media (max-width:767px) {
-    header .bars .bar:hover .mega{
+    header .bars  .bar:hover .mega{
         opacity: 1;
         z-index: 100;
         top: calc(100% + 1px);
@@ -216,27 +216,9 @@ header .main-nav > li > a::before{
     background-color: var(--main-color);
     transition: var(--main-transition);
 }
-/* @media (max-width:767px) {
-    header .bars > li > a::before{
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        margin-bottom: 4px;
-        left: -100%;
-        background-color: var(--main-color);
-        transition: var(--main-transition);
-    }
-} */
 header .main-nav > li > a:hover::before{
     left: 0;
 }
-/* @media (max-width:767px) {
-    header .bars a:hover::before{
-        left: 0;
-    }
-} */
 header .mega-menu{
     position: absolute;
     width: 30%;
@@ -343,9 +325,7 @@ header .mega-menu .links li a{
 header .mega-menu .links li a i{
     margin-right: 10px;
 }
-/* header .bars .bar:hover .mega{
-    display: flex;
-} */
+
 @media (max-width:767px){
     header .mega .links li a{
         color: var(--main-color);
@@ -357,9 +337,9 @@ header .mega-menu .links li a i{
     header .mega .links li a i{
         margin-right: 10px;
     }
-    header .bars .bar:hover .mega{
+    /* header .bars .bar:hover .mega{
         display: flex;
-    }
+    } */
 }
 /* end header */
 /* start landing */
@@ -517,15 +497,20 @@ header .mega-menu .links li a i{
 }
 .services .box{
     background-color:  #6a5c9c3e;
+    background-image: url(../imgs/serv2.jpg);
+    background-size: cover;
     counter-increment: services;
     transition: var(--main-transition);
     position: relative;
-    border-radius: 10px;
-}
-.services .box:hover{
+    border-radius: 20px 0px 20px 0px;
+    height: max-content;
     border-top: var(--main-color) 3px solid;
     transition: var(--main-transition);
-} 
+}
+/* .services .box:hover{
+    border-top: var(--main-color) 3px solid;
+    transition: var(--main-transition);
+}  */
 .services .box > i{
     margin: 30px auto 15px;
     display: block;
@@ -534,9 +519,20 @@ header .mega-menu .links li a i{
     text-align: center;
 }
 .services .box > h3{
-    margin: 20px 0 40px ;
+    margin: 20px 0 30px ;
     color:var(--main-color);
     font-size: 20px;
+    text-align: center;
+}
+.services .box .contButton{
+    color: var(--section-background);
+    padding: 9px 7px;
+    font-size: 10px;
+    background-color: var(--text-color);
+    border-radius: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: flex-end;
+    width: fit-content;
     text-align: center;
 }
 /* end services */
