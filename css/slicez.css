@@ -158,11 +158,16 @@ header .bars{
 header .main-nav{
     display: flex;
 }
+header .bar input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
 @media (max-width:767px) {
     header .bar{
         display:flex;
     }
-    header .bar:hover + .bars{
+    header .bar:has(input:checked) + .bars{
         display:flex;
     }
     header .main-nav{
