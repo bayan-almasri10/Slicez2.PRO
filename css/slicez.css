@@ -85,7 +85,6 @@ ul{
     position: relative;
     border: 2px solid var(--main-color) ;
     background-color: var(--main-color);
-    border-radius: 10px;
     color: white;
     width: fit-content;
     font: 20px;
