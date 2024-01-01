@@ -466,8 +466,8 @@ header .mega-menu .links li a i{
 .services .container{
     padding-top: var(--main-padding-bottom);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
-    gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(190px,1fr));
+    gap: 40px;
 }
 .services .main-title{
     color: var(--section-background);
@@ -482,19 +482,49 @@ header .mega-menu .links li a i{
     letter-spacing: 0.8;
 }
 .services p{
-    font-size: 20px;
+    font-size: 22px;
     color: var(--section-background);
     text-align: center;
     margin: 0px 40px;
     padding: 30px 30px;
 }
+@media (max-width:767px){
+    .services .container{
+        padding-top: 40px;
+    }
+    .services h4{
+    font-size: 30px;
+    font-weight: 600;
+}
+    .services p{
+    font-size: 22px;
+    color: var(--section-background);
+    text-align: center;
+    margin: 10px 30px;
+    padding:0px;
+}
+}
+.services .para{
+    font-size: 17px;
+    color: var(--section-background);
+    text-align: left;
+    margin: 0px 40px;
+    padding: 20px 10px;
+}
+
 .services .box{
     background-image: url(../imgs/mainBackground.png);
-    background-size:cover;
-    width: 300px;
+    background-size:250px 500px;
+    overflow: hidden;
+    width: 250px;
     transition: var(--main-transition);
     position: relative;
-    height: 500px;
+    height:500px;
+}
+@media (max-width:767px){
+    .services .box{
+        margin: auto;
+    }
 }
 .services .box .info h2{
     z-index: -1;
@@ -503,9 +533,10 @@ header .mega-menu .links li a i{
     color:var(--section-background);
     margin-top: 80%;
     display: flex;
+    font-size: 25px;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     font-weight: 600;
     letter-spacing: 0.8;
 }
@@ -561,9 +592,11 @@ header .mega-menu .links li a i{
 .services .video:hover{
     background-image: url(../imgs/video.png);
 }
-.services .digitalMarkitin{
-    background-image: url(../imgs/digitalMarkiting.png);
-    transition: var(--main-transition);
+.services .digitalMarketing:hover{
+    background-image: url(../imgs/digitalMarketing.png);
+}
+.services .interior:hover{
+    background-image: url(../imgs/interior.png);
 }
 @media (max-width:767px){
     .services .box,
@@ -611,9 +644,13 @@ header .mega-menu .links li a i{
     .services .video{
         background-image: url(../imgs/video.png);
     }
-    .services .digitalMarkiting{
-        background-image: url(../imgs/digitalMarkiting.png);
+    .services .digitalMarketing{
+        background-image: url(../imgs/digitalMarketing.png);
     }
+    .services .interior{
+        background-image: url(../imgs/interior.png);
+    }
+
 }
 .services .box > i{
     margin: 30px auto 15px;
@@ -1181,12 +1218,18 @@ header .mega-menu .links li a i{
     display: flex;
 }
 .footer .box .social li{
-    margin-left: 8px;
+    margin-left: 16px;
 }
 .footer .box .social li .ico{
     width: 30px;
     height: 30px;
 }
+.footer .box .social li .linkedin{
+    margin-top: 4px;
+    width: 25px;
+    height: 25px;
+}
+linkedin
 .footer .box .social li a{
     background-color:var(--section-background) ;
     color:white;
