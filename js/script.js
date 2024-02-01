@@ -3,7 +3,7 @@ $(document).ready(function () {
     new Image().src = "imgs/concept.png";
     new Image().src = "imgs/brandIdentity.png";
     new Image().src = "imgs/digitalMarketing.png";
-    new Image().src = "imgs/ebook.png";
+    new Image().src = "imgs/eBook.png";
     new Image().src = "imgs/email.png";
     new Image().src = "imgs/illustration.png";
     new Image().src = "imgs/interior.png";
